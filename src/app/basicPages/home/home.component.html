@@ -1,0 +1,267 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-md card1Content">
+                <h2>Need help to choose
+
+                    the right plan?</h2>
+                <h6>I have a query on <span><b>my policy</b></span></h6>
+                <button class="btn btn-outline-info mt-4 mb-3" routerLink="/login">Login to Get Help</button>
+                <hr><br>
+                <h6>I want to buy <span><b>a new policy online</b></span></h6>
+
+
+                <form name="myForm" #frm="ngForm" (ngSubmit)="frm.form.valid && onSubmit(frm)">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" class="form-control" #name="ngModel" ngModel
+                            placeholder="Enter full name" required
+                            [ngClass]="{'is-invalid':frm.submitted && name.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && name.invalid">
+                            Please enter the name
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="name">Mobile Number:</label>
+                        <input type="number" name="number" class="form-control" #number="ngModel" ngModel
+                            placeholder="Enter mobile number" required
+                            [ngClass]="{'is-invalid':frm.submitted && number.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && number.invalid">
+                            Please enter mobile number
+                        </div>
+                    </div>
+
+
+                    <button class="btn btn-warning col-md-6 mt-3">Get a Call Back</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="">
+                <img src="../../../assets/proj-Images/connect-to-get.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="">
+                <img src="../../../assets/proj-Images/online-premium-illustration.svg" alt="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-md card1Content">
+                <h2>Pay Premium Online</h2>
+                <p>Pay your installemnts <a routerLink="">online</a> and win great treats!</p>
+                <hr><br>
+
+                <form name="myForm" #frm2="ngForm" (ngSubmit)="frm2.form.valid && onSubmitPolicyForm(frm2)">
+                    <div class="form-group">
+                        <label for="name">Policy Number:</label>
+                        <input type="text" name="polNum" class="form-control" #polNum="ngModel" ngModel
+                            placeholder="Enter policy number" required
+                            [ngClass]="{'is-invalid':frm2.submitted && polNum.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm2.submitted && polNum.invalid">
+                            Invalid policy number
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="date">Insured Date of Birth:</label>
+                        <input type="date" name="date" class="form-control" #date="ngModel" ngModel
+                            placeholder="Enter DOB as on policy" required
+                            [ngClass]="{'is-invalid':frm2.submitted && date.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm2.submitted && date.invalid">
+                            Date do not match
+                        </div>
+                    </div>
+
+
+                    <button class="btn btn-danger col-md-6 mt-3">Proceed</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br>
+
+<div class="container mt-5 ">
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+            <h1>I am a happy member</h1>
+            <div class="card shadow-md card1Content">
+                <div class="row">
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="https://apps.tataaia.com/PG/#!/policyPayment" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Pay premium</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="../../../assets/proj-Images/happy-member_compressed (1).png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Download Premium Certificate</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="../../../assets/proj-Images/connect-to-get.svg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Register claim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Raise service request</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Other services</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Become an Agent</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary col-md-6 mt-3">I Wish to Join</button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="">
+                <img src="../../../assets/proj-Images/happy-member_compressed (1).png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="container mt-5 ">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="">
+                <img src="../../../assets/proj-Images/explore-ways.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h1>I am a happy member</h1>
+            <div class="card shadow-md card1Content">
+                <div class="row">
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="https://apps.tataaia.com/PG/#!/policyPayment" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Pay premium</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Download Premium Certificate</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Register claim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Raise service request</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Other services</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Become an Agent</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary col-md-6 mt-3">I Wish to Join</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<br><br>
+
+<div class="container mt-5 ">
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+            <h1>Why Select Tata AIA
+                Life Insurance Policy?</h1>
+            <div class="card shadow-md card1Content">
+                <div class="row">
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="https://apps.tataaia.com/PG/#!/policyPayment" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Pay premium</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Download Premium Certificate</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Register claim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Raise service request</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Other services</p>
+                        </div>
+                    </div>
+                    <div class="card col-3 justify-content-center m-2">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Become an Agent</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary col-md-6 mt-3">I Wish to Join</button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="">
+                <img src="../../../assets/proj-Images/why-select-us.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>

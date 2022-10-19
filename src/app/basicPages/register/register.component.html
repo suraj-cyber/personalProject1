@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-5 mt-5 mb-5">
+                <h2>Welcome to Complete Care!</h2>
+                <hr>
+                <form name="myForm" #frm="ngForm" (ngSubmit)="frm.form.valid && onSignup(frm)">
+
+                    <div class="form-group">
+                        <label for="fn">First name: <span style="color: red;">*</span></label>
+                        <input type="text" name="fn" placeholder="First name" class="form-control" #fn="ngModel" ngModel
+                            required [ngClass]="{'is-invalid': frm.submitted && fn.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && fn.invalid">
+                            First name is required
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mn">Middle name: <span style="color: red;">*</span></label>
+                        <input type="text" name="mn" placeholder="Middle name" class="form-control" #mn="ngModel"
+                            ngModel required [ngClass]="{'is-invalid': frm.submitted && mn.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && mn.invalid">
+                            Middle name is required
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ln">Last name: <span style="color: red;">*</span></label>
+                        <input type="text" name="ln" placeholder="Last name" class="form-control" #ln="ngModel" ngModel
+                            required [ngClass]="{'is-invalid': frm.submitted && ln.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && ln.invalid">
+                            Last name is required
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="mt-3">Email address: <span style="color: red;">*</span></label>
+                        <input type="email" name="email" placeholder="email" class="form-control" #email="ngModel"
+                            ngModel required [ngClass]="{'is-invalid': frm.submitted && email.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && email.invalid">
+                            Email is required
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usr">Choose username: </label>
+                        <input type="text" name="usr" class="form-control" placeholder="minimum 4 letters"
+                            #usr="ngModel" ngModel [ngClass]="{'is-invalid': frm.submitted && usr.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && usr.invalid">
+                            Invalid username
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass" class="mt-3">Enter the password: <span style="color: red;">*</span></label>
+                        <input type="password" name="pass" placeholder="Set password" class="form-control" #pass="ngModel"
+                            ngModel required [ngClass]="{'is-invalid': frm.submitted && pass.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && fn.invalid">
+                            Set the password
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passConf" class="mt-3">Confirm the password: <span style="color: red;">*</span></label>
+                        <input type="password" name="passConf" placeholder="Confirm password" class="form-control" #passConf="ngModel"
+                            ngModel required [ngClass]="{'is-invalid': frm.submitted && passConf.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && passConf.invalid">
+                            Confirm the password
+                        </div>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-outline-primary form-control">Sign Up</button>
+                </form>
+                <h6>Already have an account? <a routerLink="/login">Click here to login</a></h6>
+            </div>
+        </div>
+    </div>
+</div>

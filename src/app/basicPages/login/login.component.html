@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-5 mt-5 mb-5">
+                <h2>Login to Your Account</h2>
+                <hr>
+                <form action="" name="myForm" #frm="ngForm" (ngSubmit)="frm.form.valid && onClickLogin(frm)">
+                    <div class="form-group">
+                        <label for="usr" class="text-center">Username:</label>
+                        <input type="text" name="usr" placeholder="Username" class="form-control"
+                            #usr="ngModel" ngModel required
+                            [ngClass]="{'is-invalid': frm.submitted && usr.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && usr.invalid">
+                            Enter the username
+                        </div>
+
+                        <label for="pass" class="mt-3">Password:</label>
+                        <input type="password" name="pass" placeholder="**********" class="form-control" #pass="ngModel"
+                            ngModel required [ngClass]="{'is-invalid': frm.submitted && pass.invalid}">
+                        <div class="invalid-feedback" *ngIf="frm.submitted && pass.invalid">
+                            Enter the password password
+                        </div>
+                    </div><br>
+                    <button type="submit" class="btn btn-outline-success form-control">Login Now</button>
+                </form>
+                <h6>Haven't created account? <a routerLink="/register">Click here to register</a></h6>
+            </div>
+        </div>
+    </div>
+</div>

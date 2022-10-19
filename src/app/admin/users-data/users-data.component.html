@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col">
+        <div ngbDropdown class="d-inline-block">
+            <a class="nav-link active" id="dropdownBasic1"
+                ngbDropdownToggle>Admin Data</a>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem routerLink="/adminUserData">Registered Customers</button>
+                <button ngbDropdownItem routerLink="/adminPremiumReq">Premium Pay requests</button>
+                <button ngbDropdownItem routerLink="/adminEnquiries">Enquiries</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2>All Users Data</h2>
+
+<table class="table table-bordered table-primary">
+    <tr>
+        <th>Name</th>
+        <th>Middle name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+
+    <tr *ngFor="let x of userDt">
+        <td>{{x.fn}}</td>
+        <td>{{x.mn}}</td>
+        <td>{{x.ln}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.usr}}</td>
+        <td>{{x.pass}}</td>
+    </tr>
+</table>

@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col">
+        <div ngbDropdown class="d-inline-block">
+            <a class="nav-link active" id="dropdownBasic1"
+                ngbDropdownToggle>Admin Data</a>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem routerLink="/adminUserData">Registered Customers</button>
+                <button ngbDropdownItem routerLink="/adminPremiumReq">Premium Pay requests</button>
+                <button ngbDropdownItem routerLink="/adminEnquiries">Enquiries</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+<table class="table table-bordered table-success">
+    <tr>
+        <th>Name</th>
+        <th>Mobile Number</th>
+    </tr>
+    <tr *ngFor="let x of enquiryData">
+        <td>{{x.name}}</td>
+        <td>{{x.number}}</td>
+    </tr>
+</table>
